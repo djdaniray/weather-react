@@ -1,0 +1,27 @@
+h3 {
+  color: #ab47bc;
+  text-align: right;
+  font-size: 70px;
+  padding: 5px;
+  line-height: 15px;
+  margin-right: 10px;
+}
+a {
+  color: #42a5f5;
+  cursor: default;
+  text-decoration: none;
+}
+img {
+  margin-left: -15px;
+}
+.active {
+  color: #ab47bc;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+  color: #ab47bc;
+}
+.hi-lo {
+  font-size: 13px;
+}
