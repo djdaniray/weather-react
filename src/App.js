@@ -45,7 +45,7 @@ function App() {
 
       <h5>
         <a
-          href="https://github.com/djdaniray/Weather-app-DS"
+          href="https://github.com/djdaniray/weather-react"
           rel="noreferrer "
           target="_blank"
         >
