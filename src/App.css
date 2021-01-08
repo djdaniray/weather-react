@@ -18,6 +18,7 @@ div.card {
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
   border: 1px solid #42a5f5;
   border-radius: 15px;
+  box-shadow: 10px 7px 10px rgb(138, 135, 135);
 }
 div.row {
   color: #ab47bc;
