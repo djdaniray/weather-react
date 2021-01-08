@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-
 import "./Search.css";
 import "./Temperature.css";
 import "./Date.css";
@@ -13,7 +12,7 @@ import Date from "./Date";
 import WeatherDetails from "./WeatherDetails";
 import Forecast from "./Forecast";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
@@ -56,5 +55,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
