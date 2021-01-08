@@ -41,7 +41,7 @@ export default function App() {
           </div>
         </div>
       </div>
-
+      <br />
       <h5>
         <a
           href="https://github.com/djdaniray/weather-react"
