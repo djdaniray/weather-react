@@ -26,7 +26,7 @@ export default function App() {
                 <Search />
               </div>
               <div className="col-6">
-                <Temperature />
+                <Temperature city="Atlanta" />
               </div>
               <div className="col-6">
                 <Date />
