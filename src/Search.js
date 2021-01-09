@@ -19,7 +19,7 @@ export default function Search() {
   }
 
   function displayWeather(response) {
-    setTemperature(Math.round(response.data.main.temp));
+    //setTemperature(Math.round(response.data.main.temp));
   }
 
   return (
