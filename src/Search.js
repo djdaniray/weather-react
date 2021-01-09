@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Search.css";
 import axios from "axios";
-import Temperature from "./Temperature";
+//import Temperature from "./Temperature";
 
 export default function Search() {
   const [city, setCity] = useState(null);
