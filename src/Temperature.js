@@ -8,7 +8,7 @@ export default function Temperature(props) {
   function displayTemperature(response) {
     let iconPicture = response.data.weather[0].icon;
     setTemperature(response.data.main.temp);
-    setIcon(`http://openweathermap.org/img/wn/${iconPicture}@2x.png`);
+    setIcon(`https://openweathermap.org/img/wn/${iconPicture}@2x.png`);
   }
 
   let apiKey = "037d9b04c685370b3f28aaa4b1482345";
