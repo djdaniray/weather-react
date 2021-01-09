@@ -5,7 +5,7 @@ import Temperature from "./Temperature";
 
 export default function Search() {
   const [city, setCity] = useState(null);
-  const [temperature, setTemperature] = useState(null);
+  //const [temperature, setTemperature] = useState(null);
 
   function handleSearch(event) {
     event.preventDefault();
