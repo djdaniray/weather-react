@@ -48,7 +48,7 @@ export default function App() {
           rel="noreferrer "
           target="_blank"
         >
-          Open-source code {""}
+          Open-sourced code {""}
         </a>
         by Danielle Stukes
       </h5>
