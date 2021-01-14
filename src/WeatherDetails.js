@@ -14,7 +14,7 @@ export default function WeatherDetails() {
           Humidity: <span id="humid"> 80</span>%
         </li>
         <li>
-          Wind: <span id="wind"> 7</span>
+          Wind: <span id="wind"> 7</span>mph
         </li>
       </ul>
     </div>
