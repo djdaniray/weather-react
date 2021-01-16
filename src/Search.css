@@ -8,11 +8,11 @@
   color: #ffff;
 }
 
-.btn {
+.Search .btn {
   margin: 5px 2px;
   background: #a6c1ee;
   transition: (all 200ms ease-in-out);
 }
-.btn:hover {
+.Search .btn:hover {
   background: #fbc2eb;
 }

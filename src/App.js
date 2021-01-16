@@ -40,18 +40,19 @@ export default function App() {
             </div>
           </div>
         </div>
+
+        <br />
+        <h5>
+          <a
+            href="https://github.com/djdaniray/weather-react"
+            rel="noreferrer "
+            target="_blank"
+          >
+            Open-sourced code {""}
+          </a>
+          by Danielle Stukes
+        </h5>
       </div>
-      <br />
-      <h5>
-        <a
-          href="https://github.com/djdaniray/weather-react"
-          rel="noreferrer "
-          target="_blank"
-        >
-          Open-sourced code {""}
-        </a>
-        by Danielle Stukes
-      </h5>
     </div>
   );
 }
