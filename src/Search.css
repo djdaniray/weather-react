@@ -1,10 +1,11 @@
 .Search form {
-  margin-left: 5px;
+  margin-left: 15px;
+  margin-bottom: 5px;
   text-align: center;
 }
 .Search label {
   font-size: 20px;
-  margin-bottom: 1px;
+  margin-bottom: 3px;
   color: #ffff;
 }
 

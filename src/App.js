@@ -42,7 +42,7 @@ export default function App() {
         </div>
 
         <br />
-        <h5>
+        <footer>
           <a
             href="https://github.com/djdaniray/weather-react"
             rel="noreferrer "
@@ -51,7 +51,7 @@ export default function App() {
             Open-sourced code {""}
           </a>
           by Danielle Stukes
-        </h5>
+        </footer>
       </div>
     </div>
   );
