@@ -13,6 +13,7 @@
 }
 .App img {
   margin-left: -15px;
+  width: 120px;
 }
 .App .active {
   color: #ab47bc;

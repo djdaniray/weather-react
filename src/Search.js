@@ -42,7 +42,7 @@ export default function Search() {
           className="btn btn-info current"
           id="current-location"
         >
-          Current Location
+          <i class="fas fa-map-marker-alt"></i>
         </button>
       </form>
     </div>
