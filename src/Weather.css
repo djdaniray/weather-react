@@ -1,0 +1,64 @@
+.App h3 {
+  color: #ab47bc;
+  text-align: right;
+  font-size: 70px;
+  padding: 5px;
+  line-height: 100px;
+  margin-right: 10px;
+}
+.App a {
+  color: #42a5f5;
+  cursor: default;
+  text-decoration: none;
+}
+.App .icon {
+  margin-left: -15px;
+  width: 120px;
+}
+.App .active {
+  color: #ab47bc;
+  cursor: default;
+}
+.App .active:hover {
+  text-decoration: none;
+  color: #ab47bc;
+}
+.hi-lo {
+  font-size: 13px;
+  position: relative;
+  top: -32px;
+}
+.weatherDetails {
+  text-align: Left;
+  margin: -3px 2px 10px 25px;
+  text-transform: capitalize;
+}
+.Weather form {
+  margin-left: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.Weather label {
+  font-size: 20px;
+  margin-bottom: 3px;
+  color: #ffff;
+}
+
+.Weather .btn {
+  margin: 5px 2px;
+  background: #a6c1ee;
+  transition: (all 200ms ease-in-out);
+}
+.Weather .btn:hover {
+  background: #fbc2eb;
+}
+ul,
+.date-time {
+  text-align: left;
+  font-size: 25px;
+  color: white;
+  list-style-type: none;
+  line-height: 1;
+  padding: 0;
+  margin-left: 10px;
+}
