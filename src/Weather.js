@@ -5,7 +5,7 @@ import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState({ ready: false });
+ // const [city, setCity] = useState({ ready: false });
 
   function displayTemperature(response) {
     let icon = response.data.weather[0].icon;
@@ -27,7 +27,7 @@ export default function Weather(props) {
     event.prevent.default();
   }
 
-  function updateCity(event) {
+  //function updateCity(event) {
     setCity(event.target.value);
   }
 

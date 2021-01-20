@@ -39,7 +39,7 @@ export default function FormattedDate(props) {
   return (
     <div>
       <li>
-        {month} {year}{" "}
+        {month} {day} {year}{" "}
       </li>
       <li>
         {day} {hours}:{minutes}
