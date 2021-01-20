@@ -13,11 +13,9 @@ export default function App() {
       <div className="container">
         <div className="card">
           <div className="card-body">
-            <div className="row">
-              <Weather city="Atlanta" />
-              <div className="col-12">
-                <Forecast />
-              </div>
+            <Weather city="Atlanta" />
+            <div className="col-12">
+              <Forecast />
             </div>
           </div>
         </div>

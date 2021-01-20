@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
+
 import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
- // const [city, setCity] = useState({ ready: false });
+  const [city, setCity] = useState(props.city);
 
   function displayTemperature(response) {
     let icon = response.data.weather[0].icon;
@@ -23,11 +24,17 @@ export default function Weather(props) {
     });
   }
 
+  function search() {
+    let apiKey = "037d9b04c685370b3f28aaa4b1482345";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(displayTemperature);
+  }
   function handleSearch(event) {
-    event.prevent.default();
+    event.preventDefault();
+    search();
   }
 
-  //function updateCity(event) {
+  function updateCity(event) {
     setCity(event.target.value);
   }
 
@@ -61,6 +68,7 @@ export default function Weather(props) {
               </button>
             </form>
           </div>
+
           <div className="col-6">
             <div className="clearfix">
               <div className="float-right">
@@ -94,21 +102,23 @@ export default function Weather(props) {
             </ul>
           </div>
           <div className="col-6">
-            <ul className="weatherDetails">
+            <ul className="weatherDetails text-capitalize">
               <li>
                 <span id="descrip">{weatherData.description}</span>
               </li>
               <li>
                 <span id="im-hi-lo">
                   Hi {Math.round(weatherData.hi)}°F | Lo{" "}
-                  {Math.round(weatherData.lo)}°F
+                  {Math.round(weatherData.lo)}
+                  °F
                 </span>
               </li>
               <li>
                 Humidity: <span id="humid"> {weatherData.humidity}</span>%
               </li>
               <li>
-                Wind: <span id="wind"> {Math.round(weatherData.wind)}</span> mph
+                Wind: <span id="wind"> {Math.round(weatherData.wind)}</span>{" "}
+                <span className="text-lowercase"> mph</span>
               </li>
             </ul>
           </div>
@@ -116,9 +126,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let apiKey = "037d9b04c685370b3f28aaa4b1482345";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(displayTemperature);
+    search();
     return "Loading...";
   }
 }
