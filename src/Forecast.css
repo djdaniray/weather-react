@@ -3,10 +3,12 @@ div.Forecast {
   text-align: center;
   font-size: 18px;
   margin: 25px 0 5px;
+  padding: 10px 0;
 }
 
-#forecast {
+.Forecast img {
   color: #ffff;
   text-align: center;
   width: 100%;
+  margin: 0 auto;
 }
