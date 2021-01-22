@@ -12,3 +12,8 @@ div.Forecast {
   width: 100%;
   margin: 0 auto;
 }
+
+.Forecast h2 {
+  text-align: left;
+  color: #43a5f5;
+}
