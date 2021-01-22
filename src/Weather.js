@@ -43,7 +43,7 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="row">
           <div className="col-12">
-            <h1>Currently {weatherData.city} </h1>
+            <h1>{weatherData.city} Weather </h1>
           </div>
           <div className="col-6">
             <form onSubmit={handleSearch}>
