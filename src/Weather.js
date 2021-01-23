@@ -3,17 +3,17 @@ import axios from "axios";
 import "./App.css";
 
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.city);
 
   function displayTemperature(response) {
-    let icon = response.data.weather[0].icon;
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
-      iconUrl: `https://openweathermap.org/img/wn/${icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       city: response.data.name,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -73,12 +73,9 @@ export default function Weather(props) {
             <div className="clearfix">
               <div className="float-right">
                 <h3 className="display">
-                  <img
-                    className="icon"
-                    src={weatherData.iconUrl}
-                    alt=""
-                    id="icon"
-                  />
+                  <div className="float-left">
+                    <WeatherIcon code={weatherData.icon} />
+                  </div>
                   <span id="temp">{Math.round(weatherData.temperature)}</span>
                   <small className="hi-lo ml-2">
                     <a href=" " className="active" id="imperial">
