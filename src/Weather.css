@@ -44,14 +44,17 @@
 }
 
 .Weather .btn {
-  border: 1px solid #b2c0ec;
-  margin: 5px 2px;
+  border: 1px solid #8ca3ca;
+  border-radius: 5px;
+  margin: 9px 7px;
+  padding: 10px 25px;
   background: #a6c1ee;
+  box-shadow: 4px 4px 5px rgb(138, 135, 135);
   transition: (all 200ms ease-in-out);
 }
 .Weather .btn:hover {
   background: #fbc2eb;
-  border: 1px solid #b2c0ec;
+  border: 1px solid #8ca3ca;
 }
 ul,
 .date-time {

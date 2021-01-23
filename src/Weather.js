@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-import FormattedDate from "./FormattedDate";
-import WeatherIcon from "./WeatherIcon";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.city);
+  const [unit, setUnit] = useState("imperial");
 
   function displayTemperature(response) {
     setWeatherData({
@@ -41,85 +41,25 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="row">
+        <form onSubmit={handleSearch}>
           <div className="col-12">
-            <h1>{weatherData.city} Weather </h1>
-          </div>
-          <div className="col-6">
-            <form onSubmit={handleSearch}>
-              <label> Search Location </label>
-
-              <input
-                type="search"
-                className="form-control"
-                placeholder="Enter City"
-                autoFocus="on"
-                autoComplete="off"
-                id="city-input-value"
-                onChange={updateCity}
-              />
-              <input type="submit" className="btn btn-info" value="Search" />
-              <button
-                type="button"
-                className="btn btn-info current"
-                id="current-location"
-              >
-                <i className="fas fa-map-marker-alt"></i>
-              </button>
-            </form>
+            <input
+              type="search"
+              className="form-control"
+              placeholder="Enter City"
+              autoFocus="on"
+              autoComplete="off"
+              id="city-input-value"
+              onChange={updateCity}
+            />
           </div>
 
-          <div className="col-6">
-            <div className="clearfix">
-              <div className="float-right">
-                <h3 className="display">
-                  <div className="float-left">
-                    <WeatherIcon code={weatherData.icon} />
-                  </div>
-                  <span id="temp">{Math.round(weatherData.temperature)}</span>
-                  <small className="hi-lo ml-2">
-                    <a href=" " className="active" id="imperial">
-                      °F
-                    </a>{" "}
-                    |
-                    <a href=" " id="metric">
-                      °C
-                    </a>
-                  </small>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className="col-6">
-            <ul className="date-time">
-              <li id="current-time">Last updated</li>
-              <li>
-                <FormattedDate date={weatherData.date} />
-              </li>
-            </ul>
-          </div>
-          <div className="col-6">
-            <ul className="weatherDetails text-capitalize">
-              <li>
-                <span id="descrip">{weatherData.description}</span>
-              </li>
-              <li>
-                <span id="im-hi-lo">
-                  Hi {Math.round(weatherData.hi)}°F | Lo{" "}
-                  {Math.round(weatherData.lo)}
-                  °F
-                </span>
-              </li>
-              <li>
-                Humidity: <span id="humid"> {weatherData.humidity}</span>%
-              </li>
-              <li>
-                Wind: <span id="wind"> {Math.round(weatherData.wind)}</span>{" "}
-                <span className="text-lowercase"> mph</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+          <input type="submit" className="btn btn-info" value="Search" />
+          <button type="button" className="btn btn-info current">
+            <i className="fas fa-map-marker-alt"></i>
+          </button>
+        </form>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
