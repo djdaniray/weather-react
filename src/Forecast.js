@@ -1,51 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import WeatherIcon from "./WeatherIcon";
+import ForecastPreview from "./ForecastPreview";
+import "./Forecast.css";
 
-export default function Forecast() {
-  return (
-    <div className="Forecast row">
-      <h2 className="col-12">Forecast</h2>
-      <div className="col-2">
-        <h5>10:00</h5>
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
-        <div className="high-temp">
-          <strong>40° </strong>38°
-        </div>
+export default function Forecast(props) {
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
+
+  function handleForecastResponse(response) {
+    setForecast(response.data);
+    setLoaded(true);
+  }
+  console.log(forecast);
+  if (loaded) {
+    return (
+      <div className="Forecast row">
+        <ForecastPreview data={forecast.list[0]} />
+        <ForecastPreview data={forecast.list[1]} />
+        <ForecastPreview data={forecast.list[2]} />
+        <ForecastPreview data={forecast.list[3]} />
+        <ForecastPreview data={forecast.list[4]} />
+        <ForecastPreview data={forecast.list[5]} />
       </div>
-      <div className="col-2">
-        <h5>13:00</h5>
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
-        <div className="high-temp">
-          <strong>40° </strong>38°
-        </div>
-      </div>
-      <div className="col-2">
-        <h5>16:00</h5>
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
-        <div className="high-temp">
-          <strong>40° </strong>38°
-        </div>
-      </div>
-      <div className="col-2">
-        <h5>19:00</h5>
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
-        <div className="high-temp">
-          <strong>40° </strong>38°
-        </div>
-      </div>
-      <div className="col-2">
-        <h5>22:00</h5>
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
-        <div className="high-temp">
-          <strong>40° </strong>38°
-        </div>
-      </div>
-      <div className="col-2">
-        <h5>01:00</h5>
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
-        <div className="high-temp">
-          <strong>40° </strong>38°
-        </div>
-      </div>
-    </div>
-  );
+    );
+  } else {
+    let apiKey = "037d9b04c685370b3f28aaa4b1482345";
+    let apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrlForecast).then(handleForecastResponse);
+    return null;
+  }
 }

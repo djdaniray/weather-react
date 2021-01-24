@@ -11,7 +11,7 @@ div.card {
   border-radius: 10px;
   box-shadow: 8px 7px 10px rgb(138, 135, 135);
 }
-div.row {
+div.clearfix {
   color: #ab47bc;
 }
 

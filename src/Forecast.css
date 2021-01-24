@@ -6,7 +6,7 @@ div.Forecast {
   padding: 10px 0;
 }
 
-.Forecast img {
+.Forecast canvas {
   color: #ffff;
   text-align: center;
   width: 100%;

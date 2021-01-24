@@ -1,11 +1,8 @@
 import React from "react";
 import "./App.css";
 import "./Weather.css";
-import "./Forecast.css";
 
 import Weather from "./Weather";
-
-import Forecast from "./Forecast";
 
 export default function App() {
   return (
@@ -14,9 +11,7 @@ export default function App() {
         <div className="card">
           <div className="card-body">
             <Weather city="Atlanta" />
-            <div className="col-12">
-              <Forecast />
-            </div>
+            <div className="col-12"></div>
           </div>
         </div>
 
