@@ -1,10 +1,13 @@
+.App h1 {
+  color: #42a5f5;
+  text-align: center;
+  font-size: 50px;
+}
 .App h3 {
   color: #ab47bc;
-  text-align: right;
   font-size: 85px;
   padding: 5px;
   line-height: 100px;
-  margin-right: 10px;
 }
 .App a {
   color: #42a5f5;
@@ -12,8 +15,7 @@
   text-decoration: none;
 }
 .App canvas {
-  margin-left: -15px;
-  margin: 15px;
+  margin: 0 auto;
 }
 .App .active {
   color: #ab47bc;
