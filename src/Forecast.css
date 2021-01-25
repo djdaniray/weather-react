@@ -6,14 +6,20 @@ div.Forecast {
   padding: 10px 0;
 }
 
-.Forecast img {
+.ForecastPreview {
   color: #ffff;
   text-align: center;
   width: 100%;
-  margin: 0 auto;
+  margin: 10px 15px;
 }
 
 .Forecast h2 {
   text-align: left;
   color: #43a5f5;
+}
+
+.ForecastPreview canvas {
+  text-align: center;
+  width: 120%;
+  margin: 2px;
 }

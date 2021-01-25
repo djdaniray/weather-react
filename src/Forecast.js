@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import ForecastPreview from "./ForecastPreview";
 import "./Forecast.css";
+import ForecastPreview from "./ForecastPreview";
 
 export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
@@ -11,7 +11,7 @@ export default function Forecast(props) {
     setForecast(response.data);
     setLoaded(true);
   }
-  console.log(forecast);
+
   if (loaded && props.city === forecast.city.name) {
     return (
       <div className="Forecast row">
