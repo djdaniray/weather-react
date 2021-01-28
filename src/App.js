@@ -8,14 +8,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="card">
-          <div className="card-body">
-            <Weather city="Atlanta" />
-            <div className="col-12"></div>
-          </div>
-        </div>
-
-        <br />
+        <Weather city="Atlanta" />
         <footer>
           <a
             href="https://github.com/djdaniray/weather-react"

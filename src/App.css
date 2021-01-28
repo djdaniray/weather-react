@@ -1,16 +1,7 @@
 .App .container {
-  max-width: 600px;
   text-align: center;
-  margin-top: 50px;
-  font-family: "Raleway", sans-serif;
 }
 
-div.card {
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-  border: 1px solid #42a5f5;
-  border-radius: 10px;
-  box-shadow: 8px 7px 10px rgb(138, 135, 135);
-}
 div.clearfix {
   color: #ab47bc;
 }

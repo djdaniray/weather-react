@@ -2,7 +2,7 @@ div.Forecast {
   color: #ffff;
   text-align: center;
   font-size: 18px;
-  margin: 0px 0 5px 0p;
+  margin: 0 auto;
   padding: 10px 0;
 }
 
@@ -14,7 +14,7 @@ div.Forecast {
 }
 
 .Forecast h2 {
-  text-align: left;
+  text-align: center;
   color: #43a5f5;
 }
 
@@ -22,4 +22,7 @@ div.Forecast {
   text-align: center;
   width: 120%;
   margin: 2px;
+}
+.row {
+  margin: 0 auto;
 }
