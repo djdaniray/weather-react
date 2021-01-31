@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
           <h1>{props.data.city} Weather </h1>
         </div>
 
-        <div className="col-9">
+        <div className="col-10 col-sm-9">
           <div className="clearfix">
             <div className="float-right">
               <h3 className="display">

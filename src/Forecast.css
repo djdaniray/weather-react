@@ -10,7 +10,6 @@ div.Forecast {
   color: #ffff;
   text-align: center;
   width: 100%;
-  margin: 10px 15px;
 }
 
 .Forecast h2 {
@@ -20,9 +19,17 @@ div.Forecast {
 
 .ForecastPreview canvas {
   text-align: center;
-  width: 120%;
-  margin: 2px;
 }
 .row {
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .ForecastPreview {
+    margin: 10px 15px;
+  }
+  .ForecastPreview canvas {
+    width: 120%;
+    margin: 2px;
+  }
 }
